@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+<body>
+
+	<h1>Report Incident</h1>
+	<form action="#" th:action="@{/submitIncident}" method="post">
+
+<div sec:authorize="hasRole('ROLE_USER')">
+		<textarea id="is296" name="is296"></textarea>
+		<input type="submit" value="Submit" />
+</div>
+	</form>
+
+</body>
+
+</html>
