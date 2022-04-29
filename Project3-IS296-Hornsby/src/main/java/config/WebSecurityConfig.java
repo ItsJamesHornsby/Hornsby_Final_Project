@@ -20,7 +20,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	private String ldapSecurityPrincipal;
 	
 	@Value("${ldap.password}")
-	private String ldapPrincipalPassword;
+	private String ldapUrlsPrincipalPassword;
 	
 	@Value("${ldap.user.dn.pattern}")
 	private String ldapUserDnPattern;
@@ -54,6 +54,4 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.withUser("admin").password("{noop}admin").roles("ADMIN");
 		}
 	}
-	
-
 }

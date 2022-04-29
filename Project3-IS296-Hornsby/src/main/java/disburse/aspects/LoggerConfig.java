@@ -15,8 +15,9 @@ public class LoggerConfig {
 	@After("execution (* getHighestAmount())") //this is called "advice"
 	public void logGetHighestAmount(JoinPoint jp) {
 		logger.info("Before advice implementation - " + jp.getTarget().getClass() + " - Executing before " +
-				jp.getSignature().getName() + "() method");
+					 jp.getSignature().getName() + "() method");
 		System.out.println("Executing Before");
+		
 	}
 
 }
